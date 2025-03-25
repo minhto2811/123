@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gridview11"
+    android:layout_marginBottom="1dp">
+
+    <ImageView
+        android:id="@+id/imgsp"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/imgsp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:text="Mã sản phẩm:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/masp"
+                android:text="mã sp"
+                android:textColor="#FF1000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Tên món ăn:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tensp"
+                android:text="Tên món ăn"
+                android:textColor="#15AB00"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:text="Nguyên liệu:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/nguyenlieu"
+                android:text="nguyên liệu"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:maxLines="2"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:text="Cách làm:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/cachlam"
+                android:text="Cách làm"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:maxLines="5"
+                android:layout_marginLeft="20dp"
+                android:ellipsize="end"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:text="Ghi chú:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/ghichu"
+                android:text="Ghi chú"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:maxLines="2"
+                android:layout_marginLeft="20dp"
+                android:ellipsize="end"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:text="Người đăng:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/nguoidang"
+                android:text="người đăng"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:text="Mã nhóm sp:"
+                android:textColor="#0021F6"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/manhomsanpham"
+                android:text="mã nhóm sp"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imgsua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="290dp" />
+
+    <ImageButton
+        android:id="@+id/imgxoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xoa1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="320dp" />
+</RelativeLayout>
