@@ -65,6 +65,7 @@ public class Database extends SQLiteOpenHelper {
         db.delete("nhomsanpham", "maso = ?", new String[]{maSo});
         db.close();
     }
+    
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS Lichsuxem (idlichsu INTEGER PRIMARY KEY AUTOINCREMENT, masp INTEGER, tendn VARCHAR(20))");
