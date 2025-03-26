@@ -24,6 +24,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.ai.client.generativeai.Chat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.ByteArrayOutputStream;
@@ -38,6 +39,8 @@ public class TrangchuNgdung_Activity extends AppCompatActivity {
     SanPhamAdapter adapterGrv1;
     Database database;
 
+    FloatingActionButton floatingActionButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,12 @@ public class TrangchuNgdung_Activity extends AppCompatActivity {
         // Gửi tên đăng nhập qua Intent trong sự kiện click
 
         TextView textTendn = findViewById(R.id.tendn); // TextView hiển thị tên đăng nhập
+        floatingActionButton = findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(v->{
+            Intent intent = new Intent(this, ChatBot.class);
+            startActivity(intent);
+        });
+        // TextView hiển thị tên đăng nhập
         // Lấy tên đăng nhập từ SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String tendn = sharedPreferences.getString("tendn", null);

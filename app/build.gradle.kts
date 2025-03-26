@@ -2,6 +2,7 @@
 
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -28,8 +29,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlin {
+        jvmToolchain(17)
     }
 }
 
@@ -43,4 +48,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation(libs.gemini)
+    implementation(libs.gson)
 }

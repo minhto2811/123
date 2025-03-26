@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ChatBot">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_light"
+        app:title="ChatBot"
+        app:titleTextColor="@color/white"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvChatBot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingHorizontal="16sp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <ImageButton
+                android:id="@+id/imbGallery"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gallery" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:id="@+id/edtInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:hint="Aa" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="24dp" />
+
+            <ImageButton
+                android:id="@+id/imbSend"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/send" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -68,9 +68,12 @@ public class Database extends SQLiteOpenHelper {
     
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE IF NOT EXISTS taikhoan(tendn VARCHAR(20) PRIMARY KEY, matkhau VARCHAR(50), quyen VARCHAR(50))");
         db.execSQL("CREATE TABLE IF NOT EXISTS Lichsuxem (idlichsu INTEGER PRIMARY KEY AUTOINCREMENT, masp INTEGER, tendn VARCHAR(20))");
         db.execSQL("CREATE TABLE IF NOT EXISTS nhomsanpham(maso INTEGER PRIMARY KEY AUTOINCREMENT, tennsp NVARCHAR(200), anh BLOB)");
         db.execSQL("CREATE TABLE IF NOT EXISTS sanpham(masp INTEGER PRIMARY KEY AUTOINCREMENT, tensp NVARCHAR(200),nguyenlieu TEXT,cachlam TEXT,ghichu TEXT,nguoidang NVARCHAR(100),maso INTEGER , anh BLOB)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT NOT NULL, userId TEXT NOT NULL, productId TEXT, role TEXT NOT NULL,images TEXT)");
+
     }
 
     @Override
@@ -112,7 +115,7 @@ public class Database extends SQLiteOpenHelper {
         Cursor cursor = null;
 
         try {
-            cursor = db.rawQuery("SELECT * FROM SanPham WHERE masp = ?", new String[]{masp});
+            cursor = db.rawQuery("SELECT * FROM sanpham WHERE masp = ?", new String[]{masp});
 
             if (cursor != null && cursor.moveToFirst()) {
                 // Lấy các thuộc tính của sản phẩm từ cursor
